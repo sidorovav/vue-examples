@@ -6,6 +6,14 @@
 </head>
 <body>
     <div id="app">
+        <div class="form-group">
+            <label for="shearch">поиск пациента</label>
+            <input type="text" 
+                   class="form-control"
+                   id="shearch"
+                   placeholder="ФИО"
+            >
+        </div>
         <div>
             <h1>{{ title }} </h1>
             <li v-for="(pac,index) in pacients" 
