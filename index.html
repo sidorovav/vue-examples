@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <meta charset="utf-8" />
-  <title>vue пример</title>
-  
-  <style>
-  
-  </style>
- </head>
- <body>
- <div id="app">
-    <div>
-    <h1>{{ title }} </h1>
-    <li v-for="(pac,index) in pacients" 
-        v-on:click="selectPacient(index)"
-        :class="{'active' : selectedPacIndex === index}"
-    >
-        {{pac}} {{index}}
-    </li>
+<head>
+    <meta charset="utf-8" />
+    <title>vue пример</title>
+</head>
+<body>
+    <div id="app">
+        <div>
+            <h1>{{ title }} </h1>
+            <li v-for="(pac,index) in pacients" 
+            @click="selectPacient(index)"
+            :class="{'active' : selectedPacIndex === index}">
+            {{pac}}
+            </li>
+        </div>
+        <div>
+            <h2>Пациент</h2>
+            <h3>{{pac}}</h3>
+        </div>
     </div>
-    <div>
-        <h2>Пациент</h2>
-        <h3>{{pac}}</h3>
-    </div>
- </div>    
-  <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script> prod -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="js/app.js"></script>
- </body>
+    <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script> prod -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
 </html>
