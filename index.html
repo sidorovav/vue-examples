@@ -12,13 +12,14 @@
                    class="form-control"
                    id="shearch"
                    placeholder="ФИО"
+                   v-model="shearch"
             >
         </div>
         <div>
             <h1>{{ title }} </h1>
-            <li v-for="(pac,index) in pacients" 
-            @click="selectPacient(index)"
-            :class="{'active' : selectedPacIndex === index}">
+            <li v-for="(pac,index) in filtredPacients" 
+            @click="selectPacient(pac,index)"
+            :class="{'active' : filtredPacients === index}">
             {{pac}}
             </li>
         </div>
