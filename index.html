@@ -28,6 +28,30 @@
             <h3>{{pac}}</h3>
         </div>
     </div>
+
+    <div id="app-2">
+        <span :title="message">
+          Наведи курсор на меня пару секунд,
+          чтобы увидеть динамически связанное значение title!
+        </span>
+        <span v-bind:title="message" >
+            атрибут можно связывать сокращенно двоеточием
+        </span>
+    </div>
+
+    <div id="app-3">
+        <button @click="inverse()">нажми меня</button>
+        <span v-if="seen">Сейчас меня видно</span>
+    </div>
+    <div id="app-4">
+            <ol>
+              <li v-for="todo in todos">
+                {{ todo.text }}
+              </li>
+            </ol>
+    </div>
+
+    
     <!--<script src="https://cdn.jsdelivr.net/npm/vue"></script> prod -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/app.js"></script>
