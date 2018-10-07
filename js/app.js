@@ -10,7 +10,7 @@ new Vue({
     },
     methods: { 
         selectPacient(p,i){
-            this.selectedPacIndex = i
+            this.selectedPacIndex = i;
             this.pac = p;
         }
     },
