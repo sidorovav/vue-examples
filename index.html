@@ -19,7 +19,7 @@
             <h1>{{ title }} </h1>
             <li v-for="(pac,index) in filtredPacients" 
             @click="selectPacient(pac,index)"
-            :class="{'active' : filtredPacients === index}">
+            :class="{'active' : selectedPacIndex === index}">
             {{pac}}
             </li>
         </div>

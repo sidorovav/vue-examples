@@ -6,12 +6,18 @@ new Vue({
         pacients: pacients,
         pac:pacients[0],
         selectedPacIndex:0,
-        shearch:''
+        shearch:'',
+        log:''
     },
     methods: { 
-        selectPacient(pac,i){
-            this.selectPacient = i;
-            this.pac = pac;
+        selectPacient(p,i){
+            //var vm = this;
+            //this.selectPacient = i;
+            //vm.pac = p;
+            //this.log = i;
+            console.log(p);
+            this.selectedPacIndex = i
+            this.pac = p;
         }
     },
     computed:{ 
